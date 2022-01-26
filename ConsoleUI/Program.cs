@@ -31,15 +31,28 @@ namespace ConsoleUI
             vehicles.Add(v1);
             vehicles.Add(v2);
 
-            car.DriveVirtual();
-            motorcycle.DriveAbstract();
+            //car.DriveVirtual();
+            //motorcycle.DriveAbstract();
 
 
             //Add the 4 vehicles to the list
+
             //Using a foreach loop iterate over each of the properties
-
-
             // Call each of the drive methods for one car and one motorcycle
+
+            foreach (var item in vehicles)
+            {
+                Console.WriteLine($"{item.Year} {item.Make} {item.Model}\n");
+                item.DriveAbstract();
+                Console.WriteLine();
+                item.DriveVirtual();
+                Console.WriteLine();
+
+
+            }
+
+
+           
 
             #endregion
             Console.ReadLine();
